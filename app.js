@@ -4,6 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var expressSession = require('express-session');
+const mongoose = require('mongoose');
+mongoose.connect("mongodb+srv://kirtimahapatra07:Noob0702@db.h6fjdnh.mongodb.net/?retryWrites=true&w=majority&appName=db");
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
