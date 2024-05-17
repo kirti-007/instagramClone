@@ -5,7 +5,9 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var expressSession = require('express-session');
 const mongoose = require('mongoose');
-mongoose.connect("mongodb+srv://kirtimahapatra07:Noob0702@db.h6fjdnh.mongodb.net/?retryWrites=true&w=majority&appName=db");
+mongoose.connect("mongodb+srv://admin:admin@db.h6fjdnh.mongodb.net/?retryWrites=true&w=majority&appName=db").then(() => {
+  console.log("Connected to db");
+});
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
